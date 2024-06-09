@@ -1,0 +1,189 @@
+/*--------------------- CONFIGURAÇÕES LOGIN ---------------------*/
+
+.main-login{
+    min-height: calc(100vh - 96px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-login{
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 35px;
+    background-color: var(--cor-neutra-2);
+    border-radius: 20px;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+}
+
+#form-login{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.textfielde{
+    width: 100%;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+.textfielde > label{
+    color: var(--cor-neutra-0);
+    letter-spacing: 0.5px;
+}
+
+.textfielde label::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: var(--cor-neutra-0);
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.textfielde > input{
+    width: 100%;
+    border: 2px solid #dfdfdf60;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: var(--cor-neutra-2); /*Cor da caixa do input*/
+    color: var(--cor-neutra-0); /*Cor da letra do input*/
+    font-size: 10px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.150);
+    outline: none; /*Retirou o contorno da caixa do input quando selecioando*/
+}
+
+.textfielde input:hover {
+    background-color: var(--cor-neutra-1);
+}
+
+.textfielde input:focus-visible {
+    outline: none;
+}
+
+.textfielde i{
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.textfielde small{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+small{
+    font-size: 12px;
+}
+
+.manter-conexao{
+    margin-right: 52%;
+    display: flex;
+    font-size: 10px;
+    gap: 5px;
+    color: var(--cor-neutra-0);
+    accent-color: var(--cor-neutra-1);
+}
+
+.manter-conexao input {
+    width: 10px;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 16px 0px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase; /*Transformou todas as letras em maisculas*/
+    font-weight: 800;
+    letter-spacing: 3px;
+    background-color: white; /*Cor da caixa do entrar*/
+    cursor: pointer;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.150);
+}
+
+.btn-login a{
+    color: var(--cor-neutra-2);
+    text-decoration: none;
+}
+
+.btn-login:hover{
+    background-color: #ffffffd5;
+}
+
+.cadastro-senha{
+    font-size: 10px;
+    color: var(--cor-neutra-0);
+}
+
+div > label > a{
+    color: var(--cor-neutra-0);
+    font-weight: bold;
+}
+
+/* Error and Success */
+
+.textfielde.success input {
+    border-color: #2ecc71;
+}  
+
+.textfielde.erro input {
+    border-color: #e74c3c;
+}
+
+.textfielde.success input:focus-visible {
+    outline: none;
+}
+
+.textfielde.erro input:focus-visible {
+    outline: none;
+}
+
+.textfielde.success i.fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+}
+  
+.textfielde.erro i.fa-exclamation-circle {
+    color: #e74c3c;
+    visibility: visible;
+}
+  
+.textfielde.erro small {
+    visibility: visible;
+    color: #e74c3c;
+}
+
+/*--------------------- Responsividade ---------------------*/
+
+@media screen and (max-width: 480px){
+    .container-login{
+       width: 350px;
+    }
+
+    .manter-conexao{
+        margin-right: 44%;
+    }
+}
+
+
+  

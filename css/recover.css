@@ -1,0 +1,141 @@
+/*--------------------- CONFIGURAÇÕES LOGIN ---------------------*/
+
+.main-login{
+    min-height: calc(100vh - 96px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-login{
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 35px;
+    background-color: var(--cor-neutra-2);
+    border-radius: 20px;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.form-login{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.textfielde{
+    width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+.textfielde > label{
+    color: var(--cor-neutra-0);
+    letter-spacing: 0.5px;
+}
+
+.textfielde label::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: var(--cor-neutra-0);
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.textfielde > input{
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: var(--cor-neutra-2); /*Cor da caixa do input*/
+    color: var(--cor-neutra-0); /*Cor da letra do input*/
+    font-size: 10px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.150);
+    outline: none; /*Retirou o contorno da caixa do input quando selecioando*/
+}
+
+.textfielde input:hover {
+    background-color: var(--cor-neutra-1);
+}
+
+.textfielde input:focus-visible {
+    outline: 0.1px solid var(--cor-neutra-0);
+}
+
+.textfielde i {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.textfielde small{
+    font-size: 10px;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    color: var(--cor-neutra-0);
+    visibility: hidden;
+}
+
+
+.textfielde.success input {
+    border-color: #2ecc71;
+}
+  
+.textfielde.error input {
+    border-color: #e74c3c;
+}
+  
+.textfielde.success i.fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+}
+  
+.textfielde.error i.fa-exclamation-circle {
+    color: #e74c3c;
+    visibility: visible;
+}
+  
+.textfielde.error small {
+    visibility: visible;
+    color: #e74c3c;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 16px 0px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase; /*Transformou todas as letras em maisculas*/
+    font-weight: 800;
+    letter-spacing: 3px;
+    background-color: white; /*Cor da caixa do entrar*/
+    cursor: pointer;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.150);
+}
+
+.btn-login a{
+    color: var(--cor-neutra-2);
+    text-decoration: none;
+}
+
+.btn-login:hover{
+    background-color: #ffffffd5;
+}

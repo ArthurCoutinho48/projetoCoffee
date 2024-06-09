@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café de outono - Coffee</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="img/logo/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header>
+
+        <nav id="navbar">
+
+            <a href="index.html"><i class="fa-solid fa-mug-saucer" id="nav_logo"> coffee</i></a>
+
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a href="index.html#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#produtos">Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#avaliacao">Avaliações</a>
+                </li>
+            </ul>
+
+            <div class="rigth-nav">
+
+                <button type="button" class="btn-default">
+                    <a href="#">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>
+                </button>
+
+                <ul class="nav-list">
+                    <li class="drop-hover">
+                        <div class="drop-text">
+                            <span>Menu</span>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="drop-links">
+                            <a href="login.html">Entrar</a>
+                            <a href="cadastro.html">Cadastre-se</a>
+                            <a href="sobreNos.html">Sobre-nós</a>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+            
+            <div class="mobile-menu-icon">
+                <button type="button" onclick="menuShow()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+        </nav>
+
+        <div class="mobile_menu">
+
+            <ul>
+                <li class="nav-item">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#produtos">Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#avaliacao">Avaliações</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#home">Menu</a>
+                </li>
+            </ul>
+
+            <div class=".btn-default">
+                <button><a href="#">Entrar</a></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-compra">
+
+        <section class="section">
+
+            <article class="container-compra">
+
+                <div class="left-side">
+                    <div class="select-image">
+                        <img src="img/tela-produto/cof-02.png" alt="Produto">
+                    </div>
+                    <div class="thumbnails">
+                        <div class="thumbnail">
+                            <img src="img/teste01.01.png" alt="">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="img/teste01.01.png" alt="">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="img/teste01.01.png" alt="">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="img/teste01.01.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-side">
+
+                    <div class="text">
+                        <h1 class="buy-title-loja">Coffee</h1>
+                        
+                        <h2 class="buy-title-produto">Café de outono                       </h2>
+                        <span class="buy-description">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        </span>
+                    </div>
+
+                    <div class="buy-prices">
+                        <h3>Para: R$ 150,00</h3>
+                        <span class="off">De: R$ 250,00</span>
+                    </div>
+                    
+                    <div class="options">
+
+                        <div class="amount">
+                            <div class="menos">
+                                <button>-</button>
+                            </div>
+                            <span>0</span>
+                            <div class="mais">
+                                <button>+</button>
+                            </div>
+                        </div>
+
+                        <a href="" class="btn-buy" id="btn_a">
+                            <button class="btn-default">
+                                <i class="fa-solid fa-basket-shopping"></i>
+                            </button>
+                            <span>Comprar</span>
+                        </a>
+                    </div>
+                    
+                </div>
+
+            </article>
+            
+        </section>
+
+    </main>
+
+    <footer>
+        <img src="img/footer.svg" alt="fundo">
+
+        <div class="footer-copyright">
+            
+            <span class="copyright">&copy Coffee 2024</span>
+            
+            <div class="social-media-buttons">
+                <a href="#">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

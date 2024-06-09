@@ -1,0 +1,103 @@
+/*--------------------- CONFIGURAÇÕES PRODUTOS ---------------------*/
+
+#produtos{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section-title{
+    color: var(--cor-primaria-4);
+}
+
+.section-subtitle{
+    font-size: 20px;
+}
+
+.cups{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.cup{
+    width: 25%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    gap: 15px;
+    background-color: var(--cor-neutra-2);
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden; /*Esconder tudo que ultrapssar a caixa*/
+}
+
+.cup-heart{
+    width: 70px;
+    height: 70px;
+    right: -10px;
+    top: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    font-size: 25px;
+    background-color: var(--cor-neutra-0);
+    border-radius: 0px 37.5px 0px 42.5px;
+}
+
+.cup-title{
+    color: var(--cor-neutra-0);
+}
+
+.cup-description{
+    color: var(--cor-neutra-0);
+    text-align: center;
+}
+
+.cup-rate i{
+    color: var(--cor-primaria-3);
+}
+
+.cup-rate span{
+    color: var(--cor-neutra-0);
+}
+
+.cup-price, .cup-price > h5{
+    display: flex;
+    align-items: center;
+    color: var(--cor-neutra-0);
+    gap: 20px;
+}
+
+.cup-price > a{
+    text-decoration: none;
+}
+
+.btn-compra{
+    padding: 10px 14px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    color: var(--cor-neutra-0);
+    background-color: var(--cor-neutra-0);
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-compra i{
+    text-decoration: none;
+    color: var(--cor-neutra-2);
+}
+
+.btn-compra:hover, .btn-compra:hover > i{
+    color: var(--cor-neutra-0);
+    background-color: var(--cor-neutra-1);
+}

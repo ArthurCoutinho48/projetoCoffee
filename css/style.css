@@ -1,0 +1,202 @@
+/*--------------------- IMPORTAÇÕES ---------------------*/
+
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url(header.css);
+
+@import url(/css/tela-principal/home.css);
+
+@import url(/css/tela-principal/produtos.css);
+
+@import url(/css/tela-principal/avaliacao.css);
+
+@import url(footer.css);
+
+@import url(login.css);
+
+@import url(cadastro.css);
+
+@import url();
+
+@import url(compra.css);
+
+@import url(sobreNos.css);
+
+/*--------------------- CRIAÇÃO DE VARIAVEIS ---------------------*/
+
+:root{
+
+    /*Cores*/
+    --cor-primaria-0: #f8d477;
+    --cor-primaria-1: #ffe100;
+    --cor-primaria-2: #ffcb45;
+    --cor-primaria-3: #e9a209;
+    --cor-primaria-4: #9a8064;
+    --cor-neutra-0: #fff9ea;
+    --cor-neutra-1: #3d3d3d;
+    --cor-neutra-2: #1d1d1d;
+
+    /*Tipografia*/
+    --font-principal: 'Poppins', sans-serif;
+}
+
+/*--------------------- CONFIGURAÇÕES GERAIS ---------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-principal);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--cor-neutra-0);
+}
+
+.section{
+    padding: 28px 8%;
+}
+
+.card-title{
+    color: var(--cor-neutra-0);
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.card-subtitle{
+    color: var(--cor-neutra-0);
+    font-size: 10px;
+
+}
+
+.btn-default {
+    padding: 10px 14px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    color: var(--cor-neutra-0);
+    background-color: var(--cor-neutra-2);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-default a{
+    text-decoration: none;
+    color: var(--cor-neutra-0);
+}
+
+.btn-default:hover{
+    background-color: var(--cor-neutra-1);
+}
+
+/*--------------------- Responsividade ---------------------*/
+
+@media screen and (max-width: 1170px){
+
+    #homer{
+        min-height: 100%;
+        padding-top: 0px;
+    }
+
+    .home-rigth{
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .home-left, .home-left img{
+    display: none;
+    }
+
+    .cups{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cup{
+        width: calc(50% - 12px);
+    }
+
+    #avaliacao{
+        flex-direction: column;
+    }
+
+    #avaliacao .section-subtitle{
+        text-align: center;
+    }
+
+    .avaliacao-animacao{
+        display: none;
+    }
+
+    .avaliacao_content{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .nav-list, #navbar .btn-default{
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+    .mobile-menu-icon button {
+        font-size: 1.5rem;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+
+    .mobile-menu .btn-default {
+        display: block;
+        padding: 1rem 2rem;
+    }
+    .mobile-menu .btn-default button {
+        width: 100%;
+    }
+    .open {
+        display: block;
+    }
+
+    .cup{
+        width: 100%;
+    }
+
+    .avaliacao_content{
+        width: 100%;
+    }
+
+    .footer-list{
+        justify-content: space-between;
+        gap: 5px;
+    }
+
+    .footer-copyright{
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+}

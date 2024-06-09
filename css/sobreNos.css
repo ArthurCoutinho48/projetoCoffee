@@ -1,0 +1,20 @@
+/*--------------------- CONFIGURAÇÕES SOBRE NOS ---------------------*/
+
+.main-sobre-nos{
+    min-height: calc(100vh - 96px);
+    text-align: center;
+}
+
+.main-sobre-nos > section > article > h1{
+    font-size: 4rem;
+    color: var(--cor-neutra-2);
+}
+
+.main-sobre-nos > section > article > h1 > span{
+    color: var(--cor-primaria-4);
+}
+
+.main-sobre-nos > section > article > p{
+    margin: 3%;
+    font-size: 20px;
+}

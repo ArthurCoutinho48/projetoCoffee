@@ -1,0 +1,40 @@
+/*--------------------- CONFIGURAÇÕES FOOTER ---------------------*/
+
+footer{
+    background-color: var(--cor-neutra-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+footer > img{
+    width: 100%;
+
+}
+
+.footer-list{
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+
+.footer-item a{
+    text-decoration: none;
+    color: var(--cor-neutra-0);
+    font-weight: 300;
+}
+
+.footer-copyright{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 8% 24px 8%;
+}
+
+.copyright{
+    color: var(--cor-neutra-0);
+    font-size: 500;
+}

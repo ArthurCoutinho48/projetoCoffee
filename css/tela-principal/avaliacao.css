@@ -1,0 +1,52 @@
+/*--------------------- CONFIGURAÇÕES AVALIAÇÕES ---------------------*/
+
+#avaliacao{
+    min-height: calc(100vh - 96px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+}
+
+.avaliacao-animacao{
+    width: 50%;
+    
+}
+
+.avaliacao_content{
+    width: 50%;
+}
+
+.feedback-group{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.feedback{
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 20PX;
+    background-color: var(--cor-neutra-0);
+    border-radius: 12px;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.feedback-content p{
+    display: flex;
+    justify-content: space-between;
+}
+
+.feedback-content p span{
+    color: var(--cor-primaria-3);
+}
