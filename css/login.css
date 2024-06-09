@@ -30,7 +30,6 @@
 
 .textfielde{
     width: 100%;
-    padding-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -76,6 +75,7 @@
 }
 
 .textfielde i{
+    display: none;
     position: absolute;
     top: 50px;
     right: 10px;
@@ -83,6 +83,7 @@
 }
 
 .textfielde small{
+    display: none;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -142,6 +143,10 @@ div > label > a{
 
 /* Error and Success */
 
+.textfielde.erro{
+    padding-bottom: 20px;
+}
+
 .textfielde.success input {
     border-color: #2ecc71;
 }  
@@ -159,16 +164,19 @@ div > label > a{
 }
 
 .textfielde.success i.fa-check-circle {
+    display: block;
     color: #2ecc71;
     visibility: visible;
 }
   
 .textfielde.erro i.fa-exclamation-circle {
+    display: block;
     color: #e74c3c;
     visibility: visible;
 }
-  
+
 .textfielde.erro small {
+    display: block;
     visibility: visible;
     color: #e74c3c;
 }

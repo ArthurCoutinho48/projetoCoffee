@@ -3,7 +3,15 @@ const fullname = document.getElementById('fullname')
 const cpf = document.getElementById('cpf')
 const dataNascimento = document.getElementById('dataNascimento')
 const nomeMae = document.getElementById('nomeMae')
+const genero = document.getElementById('gender')
 const email = document.getElementById('email')
+const telFixo = document.getElementById('telefoneFixo')
+const telCelular = document.getElementById('telefoneCelular')
+const cep = document.getElementById('cep')
+const logradouro = document.getElementById('logradouro')
+const bairro = document.getElementById('bairro')
+const municipio = document.getElementById('municipio')
+const uf = document.getElementById('uf')
 const usermane = document.getElementById('usermane')
 const password = document.getElementById('password')
 const passwordConfirmation = document.getElementById('password-confirmation')
@@ -13,7 +21,6 @@ form.addEventListener('submit', (event) => {
 
     checkForm()
 })
-
 
 //Nova validadação após o preemchimento dos campos
 
@@ -34,8 +41,40 @@ nomeMae.addEventListener('blur', () => {
     checkInputNomeMae()
 })
 
+genero.addEventListener('blur', () => {
+    checkInputGenero()
+})
+
 email.addEventListener('blur', () => {
     checkInputEmail()
+})
+
+telFixo.addEventListener('blur', () => {
+    checkTelFixo()
+})
+
+telCelular.addEventListener('blur', () => {
+    checkTelCelular()
+})
+
+cep.addEventListener('blur', () => {
+    checkCEP()
+})
+
+logradouro.addEventListener('blur', () => {
+    checkLogradouro()
+})
+
+bairro.addEventListener('blur', () => {
+    checkBairro()
+})
+
+municipio.addEventListener('blur', () => {
+    checkMunicipio()
+})
+
+uf.addEventListener('blur', () => {
+    checkUF()
 })
 
 usermane.addEventListener('blur', () => {
@@ -80,9 +119,20 @@ function checkInputCPF(){
 
 function checkInputDataNascimento(){
     const dataNascimentoValue = dataNascimento.value
+    let anoNascimento = dataNascimentoValue.slice(0, 4)
+    let data = new Date ()
+    let dia = data.getDate().toString().padStart(2,'0')
+    let mes = String(data.getMonth() + 1).padStart(2,'0')
+    let ano = data.getFullYear()
+    let anoAtual = ano + '-' + mes + '-' + dia
+
 
     if (dataNascimentoValue === ''){
         errorInput(dataNascimento, 'Preencha sua data de nascimento!')
+    }else if(dataNascimentoValue > anoAtual){
+        errorInput(dataNascimento, 'Ano de nascimento inválido!')
+    }else if((ano - anoNascimento) < 18){
+            errorInput(dataNascimento, 'Cadastro proibido para menores de idade!')
     }else{
         const formItem = dataNascimento.parentElement
         formItem.className = 'textfielde-cadastro success'
@@ -100,6 +150,17 @@ function checkInputNomeMae(){
     }
 }
 
+function checkInputGenero(){
+    const generoValue = genero.value
+
+    if (generoValue === ''){
+        errorInput2(genero, "Preencha o seu gênero!")
+    }else{
+        const formItem = genero.parentElement
+        formItem.className = 'gender-group success'
+    }
+}
+
 function checkInputEmail(){
     const emailValue = email.value
 
@@ -107,6 +168,88 @@ function checkInputEmail(){
         errorInput(email, "Preencha o seu e-mail!")
     }else{
         const formItem = email.parentElement
+        formItem.className = 'textfielde-cadastro success'
+    }
+}
+
+function checkTelFixo(){
+    const telFixoValue = telFixo.value
+
+    if (telFixoValue === ''){
+        errorInput(telFixo, "Preencha o seu telefone fixo!")
+    }else{
+        const formItem = telFixo.parentElement
+        formItem.className = 'textfielde-cadastro success'
+    }
+}
+
+function checkTelCelular(){
+    const telCelularValue = telCelular.value
+
+    if (telCelularValue === ''){
+        errorInput(telCelular, "Preencha o seu telefone celular!")
+    }else{
+        const formItem = telCelular.parentElement
+        formItem.className = 'textfielde-cadastro success'
+    }
+}
+
+function checkCEP(){ 
+    const cepValue = cep.value
+
+    if (cepValue === ''){
+        errorInput(cep, "Preencha o seu CEP!")
+    }else if (cepValue.length != 9){
+        errorInput(cep, "CEP inválido!")
+    }else{
+        const formItem = cep.parentElement
+        formItem.className = 'textfielde-cadastro success'
+    }
+}
+
+function checkLogradouro(){ 
+    const logradouroValue = logradouro.value
+
+    if (logradouroValue === ''){
+        errorInput(logradouro, "Preencha o seu logradouro!")
+    }else{
+        const formItem = logradouro.parentElement
+        formItem.className = 'textfielde-cadastro success'
+    }
+}
+
+function checkBairro(){ 
+    const bairroValue = bairro.value
+
+    if (bairroValue === ''){
+        errorInput(bairro, "Preencha o seu bairro!")
+    }else{
+        const formItem = bairro.parentElement
+        formItem.className = 'textfielde-cadastro success'
+    }
+}
+
+function checkMunicipio(){ 
+    const municipioValue = bairro.value
+
+    if (municipioValue === ''){
+        errorInput(municipio, "Preencha o seu município!")
+    }else{
+        const formItem = municipio.parentElement
+        formItem.className = 'textfielde-cadastro success'
+    }
+}
+
+function checkUF(){ 
+    const ufValue = uf.value.toUpperCase()
+    let ufLista = ['RO', 'AC', 'AM', 'RR', 'PA', 'AP', 'TO', 'MA', 'PI', 'CE', 'RN', 'PB', 'PE', 'AL', 'AL', 'SE', 'BA', 'MG', 'ES', 'RJ', 'SP', 'PR', 'PR', 'SC', 'RS', 'MS', 'MT', 'GO','DF']
+
+    if (ufValue === ''){
+        errorInput(uf, "Preencha a sua UF!")
+    }else if(ufLista.includes(ufValue) == false){
+        errorInput(uf, "UF inválida!")
+    } else{
+        const formItem = uf.parentElement
         formItem.className = 'textfielde-cadastro success'
     }
 }
@@ -158,7 +301,15 @@ function checkForm(){
     checkInputCPF()
     checkInputDataNascimento()
     checkInputNomeMae()
+    checkInputGenero()
     checkInputEmail()
+    checkTelFixo()
+    checkTelCelular()
+    checkCEP()
+    checkLogradouro()
+    checkBairro()
+    checkMunicipio()
+    checkUF()
     checkInputUsermane()
     checkInputPassword()
     checkInputPasswordConfirmation()
@@ -183,6 +334,15 @@ function errorInput(input, message){
     textMessage.innerText = message
     formItem.className = 'textfielde-cadastro erro'
 }
+
+function errorInput2(select, message){
+    const formItem = select.parentElement
+    const textMessage = formItem.querySelector('small')
+
+    textMessage.innerText = message
+    formItem.className = 'gender-group erro'
+}
+
 
 //Máscaras
 

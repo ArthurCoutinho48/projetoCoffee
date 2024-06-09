@@ -136,10 +136,12 @@
                             <div class="gender-group">
                                 <label for="">Gênero</label>
                                 <select name="gender" id="gender" class="gender-select">
-                                    <option value="female">Feminino</option>
-                                    <option value="male">Masculino</option>
-                                    <option value="others">Outros</option>
+                                    <option value=""></option>
+                                    <option value="feminino">Feminino</option>
+                                    <option value="masculino">Masculino</option>
+                                    <option value="outros">Outros</option>
                                 </select>
+                                <small>Mensagem de erro...</small>
                             </div>
                         </div>
                     </section>
@@ -157,15 +159,15 @@
                             <small>Mensagem de erro...</small>
                         </div>
                         <div class="textfielde-cadastro">
-                            <label for="telefonefixo">Telefone fixo</label>
-                            <input type="tel" id="telefonefixo" name="telefonefixo" placeholder="(+00) 00 0000-0000">
+                            <label for="telefoneFixo">Telefone fixo</label>
+                            <input type="tel" id="telefoneFixo" name="telefoneFixo" placeholder="(+00) 00 0000-0000">
                             <i class="fas fa-exclamation-circle"></i>
                             <i class="fas fa-check-circle"></i>
                             <small>Mensagem de erro...</small>
                         </div>
                         <div class="textfielde-cadastro">
-                            <label for="telefonecelular">Telefone celular</label>
-                            <input type="tel" id="telefonecelular" name="telefonecelular" placeholder="(+00) 00 00000-0000">
+                            <label for="telefoneCelular">Telefone celular</label>
+                            <input type="tel" id="telefoneCelular" name="telefoneCelular" placeholder="(+00) 00 00000-0000">
                             <i class="fas fa-exclamation-circle"></i>
                             <i class="fas fa-check-circle"></i>
                             <small>Mensagem de erro...</small>
@@ -179,7 +181,7 @@
                     <section class="info-03">
                         <div class="textfielde-cadastro" id="input-box-03">
                             <label for="cep">CEP</label>
-                            <input type="text" id="cep" name="cep" onblur="preencherEndereco(this)" placeholder="00000-000" maxlength="9">
+                            <input type="text" id="cep" name="cep" onblur="preencherEndereco(this)" placeholder="00000-000" maxlength="8">
                             <i class="fas fa-exclamation-circle"></i>
                             <i class="fas fa-check-circle"></i>
                             <small>Mensagem de erro...</small>
@@ -215,7 +217,12 @@
                         </div>
                         <div class="textfielde-cadastro" id="input-box-03">
                             <label for="uf">UF</label>
-                            <input type="text" id="uf" name="uf" placeholder="UF">
+                            <input 
+                            type="text" 
+                            id="uf" 
+                            name="uf" 
+                            maxlength="2"
+                            placeholder="UF">
                             <i class="fas fa-exclamation-circle"></i>
                             <i class="fas fa-check-circle"></i>
                             <small>Mensagem de erro...</small>
@@ -251,7 +258,7 @@
                         <div class="textfielde-cadastro">
                             <label for="password-confirmation">Confirme sua senha</label>
                             <input 
-                            type="password-confirmation" 
+                            type="password" 
                             id="password-confirmation" 
                             name="password" 
                             placeholder="Confirme sua senha"

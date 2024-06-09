@@ -1,7 +1,7 @@
 /*--------------------- CONFIGURAÇÕES CADASTRO ---------------------*/
 
 .main-cadastro{
-    min-height: calc(140vh - 96px);
+    min-height: calc(100vh - 96px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,7 +9,7 @@
 
 .container-cadastro{
     width: 800px;
-    height: 800px;
+    height: 790px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -120,13 +120,15 @@
 }
 
 .textfielde-cadastro i{
+    display: none;
     position: absolute;
-    top: 39px;
+    top: 35px;
     right: 10px;
     visibility: hidden;
 }
 
 .textfielde-cadastro small{
+    display: none;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -138,13 +140,14 @@ small{
 }
 
 .gender-group{
+    height: 81.11px;
     width: 20%;
-    margin: 1%;
+    padding-bottom: 5px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    gap: 10px;
+    position: relative;
 }
 
 .gender-group label{
@@ -165,14 +168,23 @@ small{
 }
 
 .gender-group select{
-    width: 70%;
-    border: none;
+    width: 100%;
+    border: 2px solid #dfdfdf60;
     border-radius: 10px;
-    padding: 5px;
+    padding: 10px;
     background-color: var(--cor-neutra-2);
     color: var(--cor-neutra-0);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.150);
     font-size: 10px;
+}
+
+.gender-group select:focus-visible {
+    outline: none;
+}
+
+.gender-group small{
+    display: none;
+    visibility: hidden;
 }
 
 .btn-group{
@@ -236,18 +248,40 @@ small{
 }
 
 .textfielde-cadastro.success i.fa-check-circle {
+    display: block;
     color: #2ecc71;
     visibility: visible;
 }
   
 .textfielde-cadastro.erro i.fa-exclamation-circle {
+    display: block;
     color: #e74c3c;
     visibility: visible;
 }
-  
+
 .textfielde-cadastro.erro small {
+    display: block;
     visibility: visible;
     color: #e74c3c;
+}
+
+.gender-group.success select {
+    border-color: #2ecc71;
+}  
+
+.gender-group{
+    margin-top: 5px;
+}
+
+.gender-group.erro select {
+    border-color: #e74c3c;
+}
+
+.gender-group.erro small {
+    display: block;
+    visibility: visible;
+    color: #e74c3c;
+    padding-top: 10px;
 }
 
 /*--------------------- Responsividade ---------------------*/
@@ -288,10 +322,14 @@ small{
     }
 
     .info-01, .info-01_01, .info-01_02, .info-02, .info-03, .info-04{
-        width: 95%;
+        width: 99%;
         margin: 0;
         flex-direction: column;
         gap: 20px;
+    }
+
+    .textfielde-cadastro{
+        width: 100%;
     }
 
     .input-box{
@@ -305,5 +343,11 @@ small{
     
     #input-box-03{
         width: 100%;
+    }
+}
+
+@media screen and (max-height: 1050px){
+    .main-cadastro{
+        min-height: calc(140vh - 96px);
     }
 }
