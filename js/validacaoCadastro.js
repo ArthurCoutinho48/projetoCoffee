@@ -51,10 +51,12 @@ email.addEventListener('blur', () => {
 
 telFixo.addEventListener('blur', () => {
     checkTelFixo()
+    mascaraTelefone(telFixo)
 })
 
 telCelular.addEventListener('blur', () => {
     checkTelCelular()
+    mascaraCelular(telCelular)
 })
 
 cep.addEventListener('blur', () => {
@@ -177,6 +179,8 @@ function checkTelFixo(){
 
     if (telFixoValue === ''){
         errorInput(telFixo, "Preencha o seu telefone fixo!")
+    }else if (telFixoValue.length < 12){
+        errorInput(telFixo, "Preencha o seu telefone fixo!")
     }else{
         const formItem = telFixo.parentElement
         formItem.className = 'textfielde-cadastro success'
@@ -188,7 +192,10 @@ function checkTelCelular(){
 
     if (telCelularValue === ''){
         errorInput(telCelular, "Preencha o seu telefone celular!")
-    }else{
+    }else if (telCelularValue.length < 13){
+        errorInput(telCelular, "Preencha o seu telefone celular!")
+    }
+    else{
         const formItem = telCelular.parentElement
         formItem.className = 'textfielde-cadastro success'
     }
@@ -343,7 +350,6 @@ function errorInput2(select, message){
     formItem.className = 'gender-group erro'
 }
 
-
 //Máscaras
 
 function RegExCPF(cpf){
@@ -358,6 +364,49 @@ function RegExCPF(cpf){
 
     elemtentoAlvo.value = cpfAtualizado; 
 }
+
+function mascaraTelefone(telFixo){
+    let telFixoValue = telFixo.value
+
+    //Removendo os caracteres não numéricos e limitando a 11 dígitos.
+    telFixoValue = telFixoValue.replace(/\D/g, '').substring(0,12)
+    
+    let pais = telFixoValue.slice(0,2)
+    let ddd = telFixoValue.slice(2,4)
+    let parte1 = telFixoValue.slice(4,8)
+    let parte2 = telFixoValue.slice(8,12)
+    let numeroFormatado = ''
+
+    if (telFixoValue.length == 12){
+        numeroFormatado = `(+${pais}) ${ddd} ${parte1}-${parte2}`
+    }
+    
+    //Enviar para o campo o número formatado
+    telFixo.value = numeroFormatado
+}
+
+
+function mascaraCelular(telCelular){
+    let telCelularValue = telCelular.value
+
+    //Removendo os caracteres não numéricos e limitando a 11 dígitos.
+    telCelularValue = telCelularValue.replace(/\D/g, '').substring(0,13)
+    
+    let pais = telCelularValue.slice(0,2)
+    let ddd = telCelularValue.slice(2,4)
+    let parte1 = telCelularValue.slice(4,9)
+    let parte2 = telCelularValue.slice(9,13)
+    let numeroFormatado = ''
+
+    if (telCelularValue.length == 13){
+        numeroFormatado = `(+${pais}) ${ddd} ${parte1}-${parte2}`
+    }
+    
+    //Enviar para o campo o número formatado
+    telCelular.value = numeroFormatado
+}
+
+
 
 usermane.addEventListener('keypress', function(e){
     const keyCode = (e.keyCode ? e.keyCode : e.wich)
