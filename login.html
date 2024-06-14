@@ -84,54 +84,55 @@
     </header>
 
     <main class="main-login">    
+
+        <div class="left-login">
+
+            <img src="img/tela-login/tablet-login-animate.svg" class="left-login-image" alt="Login Animação">
+
+        </div>
         
-        <div class="container-login"> <!--Caixa Login-->
-
-            <div class="card-title">
-                <h1>Login</h1>
+        <div class="right-login">
+            <div class="container-login"> <!--Caixa Login-->
+                <div class="card-title">
+                    <h1>Login</h1>
+                </div>
+                <form method="post" id="form-login">
+                    <div class="textfielde"> <!--Campo de Texto-->
+                        <label for="username">Usuário</label>
+                        <input
+                        type="text"
+                        maxlength="8"
+                        name="username"
+                        id="username"
+                        placeholder="Usuário">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <i class="fas fa-check-circle"></i>
+                        <small>Mensagem de erro...</small>
+                    </div>
+            
+                    <div class="textfielde"> <!--Campo de Texto-->
+                        <label for="password">Senha</label>
+                        <input
+                        type="password"
+                        maxlength="8"
+                        name="password"
+                        id="password"
+                        placeholder="Senha">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <i class="fas fa-check-circle"></i>
+                        <small>Mensagem de erro...</small>
+                    </div>
+                    <div class="manter-conexao">
+                        <input type="checkbox" name="manter-conexao" id="manter-conexao">
+                        <label for="manter-conexao">Mantenha-me conectado</label>
+                    </div>
+            
+                    <button class="btn-login" type="submit" nane="entrar" id="entrar"><a href="#">Entrar</a></button>
+                </form>
+                <div class="cadastro-senha">
+                    <label for="cadastro">Não tem uma conta? <a href="cadastro.html">Cadastre-se</a> | <a href="recover.html">Esqueceu sua senha?</a></label>
+                </div>
             </div>
-
-            <form method="post" id="form-login">
-
-                <div class="textfielde"> <!--Campo de Texto-->
-                    <label for="username">Usuário</label>
-                    <input 
-                    type="text" 
-                    maxlength="8"
-                    name="username" 
-                    id="username" 
-                    placeholder="Usuário">
-                    <i class="fas fa-exclamation-circle"></i>
-                    <i class="fas fa-check-circle"></i>
-                    <small>Mensagem de erro...</small>
-                </div>
-                
-                <div class="textfielde"> <!--Campo de Texto-->
-                    <label for="password">Senha</label>
-                    <input 
-                    type="password"
-                    maxlength="8"
-                    name="password" 
-                    id="password" 
-                    placeholder="Senha">
-                    <i class="fas fa-exclamation-circle"></i>
-                    <i class="fas fa-check-circle"></i>
-                    <small>Mensagem de erro...</small>
-                </div>
-
-                <div class="manter-conexao"> 
-                    <input type="checkbox" name="manter-conexao" id="manter-conexao">
-                    <label for="manter-conexao">Mantenha-me conectado</label>
-                </div>
-                
-                <button class="btn-login" type="submit" nane="entrar" id="entrar"><a href="#">Entrar</a></button>
-
-            </form>
-
-            <div class="cadastro-senha">
-                <label for="cadastro">Não tem uma conta? <a href="cadastro.html">Cadastre-se</a> | <a href="recover.html">Esqueceu sua senha?</a></label>
-            </div>
-
         </div>
 
     </main>

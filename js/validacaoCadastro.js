@@ -321,13 +321,35 @@ function checkForm(){
     checkInputPassword()
     checkInputPasswordConfirmation()
 
-    const formItems = form.querySelectorAll('.textfielde-cadastro')
-
-    const isValid = [...formItems].every((item) => {
-        return item.className == 'textfielde-cadastro success'
+    const formItemsText = form.querySelectorAll('.textfielde-cadastro')
+    const isValid1 = [...formItemsText].every((item1) => {
+        return item1.className != 'textfielde-cadastro erro'
     })
 
-    if(isValid){
+    const formItemsGender = form.querySelectorAll('.gender-group')
+
+    const isValid2 = [...formItemsGender].every((item2) => {
+        return item2.className == 'gender-group success'
+    })
+
+    if(isValid1 && isValid2){
+
+        const fullnameValue = fullname.value
+        const emailValue = email.value
+        const telCelularValue = telCelular.value
+        const usermaneValue = usermane.value
+        const passwordValue = password.value
+        
+        const formData = {
+            nome: fullnameValue,
+            email: emailValue,
+            celular: telCelularValue,
+            usuario: usermaneValue,
+            senha: passwordValue
+        }
+
+        localStorage.setItem('cadastroUsuario', JSON.stringify(formData))
+
         window.location.href = '/login.html'
     }
 }
@@ -406,8 +428,6 @@ function mascaraCelular(telCelular){
     telCelular.value = numeroFormatado
 }
 
-
-
 usermane.addEventListener('keypress', function(e){
     const keyCode = (e.keyCode ? e.keyCode : e.wich)
 
@@ -415,3 +435,4 @@ usermane.addEventListener('keypress', function(e){
         e.preventDefault()
     }
 })
+

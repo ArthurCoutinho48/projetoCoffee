@@ -7,6 +7,28 @@
     justify-content: center;
 }
 
+.left-login{
+    width: 50vw; /*Viewport(Tela) largura*/
+    height: 100vh; /*Viewport(Tela) altura*/
+    display: flex; /*Deixou lado a lado a div do lado direito*/
+    justify-content: center; /* Deixou a div centralizadas no eixo X*/
+    align-items: center; /* Deixou as div centralizada no eixo Y*/
+    flex-direction: column;
+}
+
+.left-login-image{
+    width: 40vw;
+}
+
+.right-login{
+    width: 50vw; /*Viewport(Tela) largura*/
+    height: 100vh; /*Viewport(Tela) altura*/
+    display: flex; /*Deixou lado a lado a div do lado direito*/
+    justify-content: center; 
+    /* Deixou a div centralizadas no eixo X*/
+    align-items: center; /* Deixou as div centralizada no eixo Y*/
+}
+
 .container-login{
     width: 400px;
     display: flex;

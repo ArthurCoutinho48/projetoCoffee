@@ -25,7 +25,7 @@ function checkInputUsermane(){
 
     if (usermaneValue === ''){
         errorInput(usermane, "Preencha um usuario!")
-    }else if (usermaneValue.length != 8){
+    }else if (usermaneValue.length != 6){
         errorInput(usermane, "Campo usuarío deve ter 8 caracteres!")
     }else{
         const formItem = usermane.parentElement
@@ -46,6 +46,26 @@ function checkInputPassword(){
     }
 }
 
+//Mensagem de erro caso o usuário não esteja cadastrado
+
+function checkCadUsermane(){
+    const usermaneValue = usermane.value
+
+    if (usermaneValue){
+        errorInput(usermane, "Usuário invalido ou não cadastrado!")
+    }
+}
+
+function checkCadPassword(){
+    const passwordValue = password.value
+
+    if (passwordValue){
+        errorInput(password, 'Senha invalida ou não cadastrada!')
+    }
+}
+
+
+
 //Checagem do formulário completa
 
 function checkForm(){
@@ -59,7 +79,24 @@ function checkForm(){
     })
 
     if(isValid){
-        window.location.href = '/index.html'
+
+        //Pegando os dados cadastros no localStorage e guardando em uma array
+        var cadastro = []
+        cadastro.push(localStorage.getItem('cadastroUsuario'))
+        cadastro = JSON.parse(cadastro)
+
+        //Convertendo o objeto 'Cadastro' para um array e armazenando nas variaveis
+        var objeto = Object.values(cadastro)
+        var usuario = objeto[3]
+        var senha = objeto[4]
+
+
+        if(usermane.value == usuario && password.value == senha){
+            window.location.href = '/index.html'
+        }else{
+            checkCadPassword()
+            checkCadUsermane()
+        }
     }
 }
 
