@@ -6,6 +6,7 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
+    gap: 20px;
 }
 
 .novidade-textfielde-group{

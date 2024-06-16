@@ -54,35 +54,48 @@
                     </a>
                 </button>
 
-                    <a href="login.html" class="login-button">
+                    <a href="login.html" class="login-button" id="loginAtivo">
+                        <button class="login-btn-user"><i class="fa-solid fa-circle-user"></i></button>
+                        <span>Login</span>
+                    </a>
+
+                    <a href="#" class="login-button inative" id="loginInativo">
                         <button class="login-btn-user"><i class="fa-solid fa-circle-user"></i></button>
                         <span id="login">Login</span>
                     </a>
 
-                    <a class="cadastro-button">
+                    <a href="cadastro.html" class="login-button" id="btn-Cadastro">
+                        <button class="login-btn-user">
+                            <i class="fa-regular fa-id-card"></i>
+                        </button>
+                        <span id="login">Cadastre-se</span>
+                    </a>
+
+                    <a class="cadastro-button inative" id="btn-Sair">
                         <button class="login-btn-user" type="button" onclick="sairLogin()">
                             <i class="fa-solid fa-right-from-bracket"></i>
                         </button>
                         <span>Sair</span>
                     </a>
 
-                <!--<button type="button" class="btn-default">
-                    <a href="login.html">
-                        <i class="fa-solid fa-circle-user"></i>
-                    </a>
-                </button>-->
 
             </div>
             
-            <div class="mobile-menu-icon">
-                <button type="button" onclick="menuShow()">
-                    <i class="fa-solid fa-bars"></i>
+            <div class="mobile-menu-icon" id="abrirMenu">
+                <button type="button" onclick="abrirMenu()">
+                    <i class="fa-solid fa-bars" id="icon-mobile-abrirMenu"></i>
+                </button>
+            </div>
+
+            <div class="mobile-menu-icon inative" id="fecharMenu">
+                <button type="button" onclick="fecharMenu()">
+                    <i class="fa-x fa-bars" id="icon-mobile-fecharMenu"></i>
                 </button>
             </div>
 
         </nav>
 
-        <div class="mobile_menu">
+        <div class="mobile-menu inative" id="menu">
 
             <ul>
                 <li class="nav-item">
@@ -94,14 +107,72 @@
                 <li class="nav-item">
                     <a href="#avaliacao">Avaliações</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#home">Menu</a>
-                </li>
+
+                <ul class="nav-list-mobile">
+
+                    <li class="drop-hover-mobile">
+
+                        <div class="drop-text-mobile">
+
+                            <button type="button" onclick="abrirSubMenu()" class="drop-text-mobile" id="abrirSubMenu">Menu</button>
+
+                            <button type="button" onclick="fecharSubMenu()" class="drop-text-mobile inative" id="fecharSubMenu">Menu</button>
+                            
+                            <div class="icon-mobile" id="icon-mobile-abrir"><i class="fa-solid fa-angle-down"></i></div>
+
+                            <div class="icon-mobile inative" id="icon-mobile-fechar"><i class="fa-x fa-angle-down"></i></div>
+                        </div>
+
+                        <div class="drop-links-mobile" id="subMenu">
+                            <a href="sobreNos.html">Sobre-nós</a>
+                            <a href="contateNos.html">Contate-nos</a>
+                        </div>
+
+                    </li>
+
+                </ul>
+
             </ul>
 
-            <div class=".btn-default">
-                <button><a href="#">Entrar</a></button>
+            <div class="rigth-nav-mobille">
+
+                <div class="compra-acessibilidade">
+                    <button type="button" class="btn-default">
+                        <a href="#">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                    </button>
+                    <button type="button" class="btn-default">
+                        <a href="#">
+                            <i class="fa-solid fa-circle-half-stroke"></i>
+                        </a>
+                    </button>
+                </div>
+
+                <div class="login-cadastro">
+
+                    <a href="login.html" class="login-button">
+                            <button class="login-btn-user"><i class="fa-solid fa-circle-user"></i></button>
+                            <span id="login-Mobile">Login</span>
+                    </a>
+
+                    <a href="cadastro.html" class="login-button" id="btn-Cadastro-mobile">
+                            <button class="login-btn-user">
+                                <i class="fa-regular fa-id-card"></i>
+                            </button>
+                            <span id="login">Cadastre-se</span>
+                    </a>
+                    <a class="cadastro-button inative" id="btn-Sair-Mobile">
+                            <button class="login-btn-user" type="button" onclick="sairLogin()">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                            </button>
+                            <span>Sair</span>
+                    </a>
+                </div>
+
             </div>
+
+
         </div>
     </header>
 
@@ -191,7 +262,7 @@
                         <img src="img/tela-principal/cof-02.png" class="cup-image">
                         <h4 class="cup-title">Café em grãos Intenso 250g</h4>
                         <span class="cup-description">
-                            O Café em Grãos Orfeu Intenso 250g é um café especial em grãos 100% Arábica, bastante encorpado de torra escura.
+                            O Café em Grãos Intenso 250g é um café especial em grãos 100% Arábica, bastante encorpado de torra escura.
                         </span>
                         <div class="cup-rate">
                             <i class="fa-solid fa-star"></i>
@@ -397,6 +468,7 @@
     </footer>
 
     <script src="js/novidades.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/fixedLogin.js"></script>
+    <script src="js/header.js"></script>
 </body>
 </html>
