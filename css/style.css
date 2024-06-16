@@ -6,11 +6,15 @@
 
 @import url(header.css);
 
-@import url(/css/tela-principal/home.css);
+@import url(tela-principal/home.css);
 
 @import url(/css/tela-principal/produtos.css);
 
+@import url(tela-principal/promocao.css);
+
 @import url(/css/tela-principal/avaliacao.css);
+
+@import url(tela-principal/novidades.css);
 
 @import url(footer.css);
 
@@ -18,11 +22,11 @@
 
 @import url(cadastro.css);
 
-@import url();
-
 @import url(compra.css);
 
 @import url(sobreNos.css);
+
+@import url(contateNos.css);
 
 /*--------------------- CRIAÇÃO DE VARIAVEIS ---------------------*/
 

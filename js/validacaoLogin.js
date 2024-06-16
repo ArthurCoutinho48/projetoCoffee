@@ -64,8 +64,6 @@ function checkCadPassword(){
     }
 }
 
-
-
 //Checagem do formulário completa
 
 function checkForm(){
@@ -90,8 +88,14 @@ function checkForm(){
         var usuario = objeto[3]
         var senha = objeto[4]
 
-
         if(usermane.value == usuario && password.value == senha){
+    
+            const formData2 = {
+                usuario2: usermane.value,
+            }
+    
+            localStorage.setItem('cadastroLogin', JSON.stringify(formData2))
+
             window.location.href = '/index.html'
         }else{
             checkCadPassword()

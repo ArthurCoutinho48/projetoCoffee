@@ -49,6 +49,67 @@ header{
     gap: 20px;
 }
 
+.login-button{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background-color: var(--cor-neutra-2);
+    padding: 10px 14px;
+    font-weight: 500;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    text-decoration: none;
+}
+
+.login-button > span{
+    color: var(--cor-neutra-0);
+}
+
+.login-button:hover{
+    background-color: var(--cor-neutra-1);
+    color: var(--cor-neutra-0);
+}
+
+.login-btn-user {
+    padding: 10px 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    color: var(--cor-neutra-2);
+    background-color: var(--cor-neutra-0);
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.login-btn-user a{
+    text-decoration: none;
+    color: var(--cor-neutra-0);
+}
+
+.cadastro-button{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background-color: var(--cor-neutra-2);
+    padding: 10px 14px;
+    font-weight: 500;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    text-decoration: none;
+}
+
+.cadastro-button > span{
+    color: var(--cor-neutra-0);
+}
+
+.cadastro-button:hover{
+    background-color: var(--cor-neutra-1);
+    color: var(--cor-neutra-0);
+}
+
 .drop-text{
     display: flex;
     align-items: center;
@@ -91,7 +152,7 @@ header{
 }
 
 .drop-hover:hover .drop-links{
-    height: 105px;
+    height: 67px;
 }
 
 .mobile-menu-icon{
@@ -100,4 +161,9 @@ header{
 
 .mobile_menu{
     display: none;
+}
+
+.cadastro-button.inative{
+    display: none;
+    visibility: none;
 }

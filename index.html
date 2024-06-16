@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="/img/logo/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body onload="index()">
 
     <header>
 
@@ -26,6 +26,18 @@
                 <li class="nav-item">
                     <a href="#avaliacao">Avaliações</a>
                 </li>
+                <ul class="nav-list">
+                    <li class="drop-hover">
+                        <div class="drop-text">
+                            <span>Menu</span>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </div>
+                        <div class="drop-links">
+                            <a href="sobreNos.html">Sobre-nós</a>
+                            <a href="contateNos.html">Contate-nos</a>
+                        </div>
+                    </li>
+                </ul>
             </ul>
 
             <div class="rigth-nav">
@@ -36,19 +48,29 @@
                     </a>
                 </button>
 
-                <ul class="nav-list">
-                    <li class="drop-hover">
-                        <div class="drop-text">
-                            <span>Menu</span>
-                            <i class="fa-solid fa-angle-down"></i>
-                        </div>
-                        <div class="drop-links">
-                            <a href="login.html">Entrar</a>
-                            <a href="cadastro.html">Cadastre-se</a>
-                            <a href="sobreNos.html">Sobre-nós</a>
-                        </div>
-                    </li>
-                </ul>
+                <button type="button" class="btn-default">
+                    <a href="#">
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                    </a>
+                </button>
+
+                    <a href="login.html" class="login-button">
+                        <button class="login-btn-user"><i class="fa-solid fa-circle-user"></i></button>
+                        <span id="login">Login</span>
+                    </a>
+
+                    <a class="cadastro-button">
+                        <button class="login-btn-user" type="button" onclick="sairLogin()">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                        </button>
+                        <span>Sair</span>
+                    </a>
+
+                <!--<button type="button" class="btn-default">
+                    <a href="login.html">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </a>
+                </button>-->
 
             </div>
             
@@ -89,18 +111,19 @@
             
             <div class="home-rigth">
                 <h1 class="title">
-                    O sabor que vai até <span>você</span>
+                    Café fresco pela <span>manhã</span>
                 </h1>
 
-                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <p class="description">Conheça nossos produtos que é delicado e minucioso. E isso faz total diferença no sabor do café que chega na sua casa. Ele começa no cultivo de cada semente, plantada em solo ideal para sua variedade.</p>
                 
                 <div class="cta-buttons">
                     <a href="#produtos" class="btn-default">Ver produtos</a>
 
-                    <a href="tel:+5521994014823" class="phone_button">
+                    <!--<a href="tel:+5521994014823" class="phone_button">
                         <button class="btn-default"><i class="fa-solid fa-phone"></i></button>
                         <span>(21) 99401-4823</span>
-                    </a>
+                    </a>-->
+                    
                 </div>
 
                 <div class="social-media-buttons">
@@ -131,139 +154,149 @@
             <h3 class="section-subtitle">Cafés para as quatro estações</h3>
 
             <div class="cups">
-
-                <!--Produto 01-->
-                <div class="cup">
-                    <div class="cup-heart">
-                        <i class="fa-solid fa-heart"></i>
+                    <!--Produto 01-->
+                    <div class="cup">
+                        <div class="cup-heart">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                
+                        <img src="img/tela-principal/cof-01.png" class="cup-image">
+                        <h4 class="cup-title">Café em Grãos Clássico 250g</h4>
+                        <span class="cup-description">
+                            Café em Grãos Clássico 250g é um café especial em grãos 100% Arábica, equilibrado e de torra média.
+                        </span>
+                        <div class="cup-rate">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(432+)</span>
+                        </div>
+                        <div class="cup-price">
+                            <h5>R$ 29,30</h5>
+                            <a href="compra01.html">
+                                <button class="btn-compra">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </a>
+                        </div>
                     </div>
-                    
-                    <img src="img/tela-principal/cof-01.png" class="cup-image">
-
-                    <h4 class="cup-title">Café de verão</h4>
-
-                    <span class="cup-description">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    </span>
-
-                    <div class="cup-rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span>(500+)</span>
+                    <!--Produto 02-->
+                    <div class="cup">
+                        <div class="cup-heart">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                
+                        <img src="img/tela-principal/cof-02.png" class="cup-image">
+                        <h4 class="cup-title">Café em grãos Intenso 250g</h4>
+                        <span class="cup-description">
+                            O Café em Grãos Orfeu Intenso 250g é um café especial em grãos 100% Arábica, bastante encorpado de torra escura.
+                        </span>
+                        <div class="cup-rate">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(353+)</span>
+                        </div>
+                        <div class="cup-price">
+                            <h5>R$ 29,30</h5>
+                            <a href="compra02.html">
+                                <button class="btn-compra">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </a>
+                        </div>
                     </div>
-
-                    <div class="cup-price">
-                        <h5>R$ 150,00</h5>
-                        <a href="compra01.html">
-                            <button class="btn-compra">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                            </button>
-                        </a>
+                    <!--Produto 03-->
+                    <div class="cup">
+                        <div class="cup-heart">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                
+                        <img src="img/tela-principal/cof-03.png" class="cup-image">
+                        <h4 class="cup-title">Café Orgânico em Grãos 250 g</h4>
+                        <span class="cup-description">
+                            O Café em Grãos Orgânico 250g é um café especial em grãos 100% Arábica, equilibrado, de torra média.
+                        </span>
+                        <div class="cup-rate">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(505+)</span>
+                        </div>
+                        <div class="cup-price">
+                            <h5>R$ 33,80</h5>
+                            <a href="compra03.html">
+                                <button class="btn-compra">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </a>
+                        </div>
                     </div>
+                    <!--Produto 04-->
+                    <div class="cup">
+                        <div class="cup-heart">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                
+                        <img src="img/tela-principal/cof-04.png" class="cup-image">
+                        <h4 class="cup-title">Café em grãos Descafeinado 250g</h4>
+                        <span class="cup-description">
+                            O Café em Grãos Descafeinado 250g é um café especial em grãos 100% Arábica, de torra escura e surpreendentes notas de chocolate.
+                        </span>
+                        <div class="cup-rate">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>(680+)</span>
+                        </div>
+                        <div class="cup-price">
+                            <h5>R$ 54,90</h5>
+                            <a href="compra04.html">
+                                <button class="btn-compra">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                
+            </div>
+
+        </section>
+
+        <section id="promocao" class="section">
+            <div class="cards-prom">
+                <div class="express">
+                    <div class="svg">
+                        <img src="img/tela-principal/coffee1.png" alt="Café Especial">
+                    </div>
+                    <h1>Café Especial</h1>
+                    <p>Feito com grãos 100% Arábica, isento de impurezas e defeitos.
+                    </p>
                 </div>
-
-                <!--Produto 02-->
-                <div class="cup">
-                    <div class="cup-heart">
-                        <i class="fa-solid fa-heart"></i>
+                <div class="express">
+                    <div class="svg">
+                        <img src="img/tela-principal/fast-delivery1.png" alt="Frete Expresso">
                     </div>
-                    
-                    <img src="img/tela-principal/cof-02.png" class="cup-image">
-
-                    <h4 class="cup-title">Café de outono</h4>
-
-                    <span class="cup-description">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    </span>
-
-                    <div class="cup-rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span>(500+)</span>
-                    </div>
-
-                    <div class="cup-price">
-                        <h5>R$ 100,00</h5>
-                        <a href="compra02.html">
-                            <button class="btn-compra">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                            </button>
-                        </a>
-                    </div>
+                    <h1>Frete Expresso</h1>
+                    <p>Frete expresso em compras acima de R$ 80.
+                    </p>
                 </div>
-
-                <!--Produto 03-->
-                <div class="cup">
-                    <div class="cup-heart">
-                        <i class="fa-solid fa-heart"></i>
+                <div class="gift">
+                    <div class="svg">
+                        <img src="img/tela-principal/giftbox1.png" alt="Gift Card">
                     </div>
-                    
-                    <img src="img/tela-principal/cof-03.png" class="cup-image">
-
-                    <h4 class="cup-title">Café de inverno</h4>
-
-                    <span class="cup-description">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    </span>
-
-                    <div class="cup-rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span>(500+)</span>
-                    </div>
-
-                    <div class="cup-price">
-                        <h5>R$ 170,00</h5>
-                        <a href="compra03.html">
-                            <button class="btn-compra">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                            </button>
-                        </a>
-                    </div>
+                    <h1>Gift Card</h1>
+                    <p>10% OFF na sua primeira compra com o cupom: COFFEEPRIMEIRA.</p>
                 </div>
-
-                <!--Produto 04-->
-                <div class="cup">
-                    <div class="cup-heart">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-                    
-                    <img src="img/tela-principal/cof-04.png" class="cup-image">
-
-                    <h4 class="cup-title">Café de primavera</h4>
-
-                    <span class="cup-description">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    </span>
-
-                    <div class="cup-rate">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <span>(500+)</span>
-                    </div>
-
-                    <div class="cup-price">
-                        <h5>R$ 125,00</h5>
-                        <a href="compra04.html">
-                            <button class="btn-compra">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                            </button>
-                        </a>
-                    </div>
-                </div>
-            </div>  
+            </div>
         </section>
 
         <section id="avaliacao" class="section">
@@ -279,7 +312,7 @@
                         <img src="img/tela-principal/avatar01.png" alt="Clientes" class="feedback-avatar">
                         <div class="feedback-content">
                             <p>
-                                Maria
+                                Maria J.
                                 <span>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -289,7 +322,7 @@
                                 </span>
                             </p>
                             <p>
-                                "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+                                "Muito bom esse café em grão. Adoro."
                             </p>
                         </div>
                     </div>
@@ -298,7 +331,7 @@
                         <img src="img/tela-principal/avatar02.png" alt="Clientes" class="feedback-avatar">
                         <div class="feedback-content">
                             <p>
-                                João
+                                João L.
                                 <span>
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
@@ -308,7 +341,8 @@
                                 </span>
                             </p>
                             <p>
-                                "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+                                "Honesto, entrega bem para o café da manhã e também para após o almoço. Muito satisfeito.
+                                "
                             </p>
                         </div>
 
@@ -316,8 +350,27 @@
 
                 </div>
 
-                <button class="btn-default">Ver mais avaliações</button>
+                <button class="btn-default"><a href="contateNos.html">Enviar minha avaliação</a></button>
             </div>
+
+        </section>
+
+        <section id="novidades" class="section">
+            <h2 class="section-title">Receba novidades</h2>
+            <h3 class="section-subtitle">Preencha seus dados e receba novidades em seu e-mail.</h3>
+
+            <form class="novidade-textfielde-group" id="form-novidades">
+                <div class="novidade-textfielde">
+                    <input type="text" placeholder="Nome" id="username">
+                    <small>Mensagem de erro...</small>
+                </div>
+                <div class="novidade-textfielde">
+                    <input type="email" placeholder="E-mail" id="email">
+                    <small>Mensagem de erro...</small>
+                </div>
+
+                <button class="btn-novidade" type="submit">Cadastrar</button>
+            </form>
 
         </section>
     </main>
@@ -343,6 +396,7 @@
         </div>
     </footer>
 
-    <script src="js/header.js"></script>
+    <script src="js/novidades.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

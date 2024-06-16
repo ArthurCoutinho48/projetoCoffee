@@ -10,7 +10,6 @@
 
 .avaliacao-animacao{
     width: 50%;
-    
 }
 
 .avaliacao_content{
@@ -26,6 +25,7 @@
 }
 
 .feedback{
+    width: 100%;
     padding: 12px;
     display: flex;
     align-items: center;
@@ -40,6 +40,11 @@
     height: 100px;
     border-radius: 100%;
     object-fit: cover;
+}
+
+.feedback-content{
+    width: 100%;
+    overflow: hidden;
 }
 
 .feedback-content p{
