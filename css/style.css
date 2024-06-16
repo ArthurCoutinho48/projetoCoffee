@@ -409,7 +409,7 @@ body{
 }
 
 @media screen and (max-width: 600px){
-    .container-login{
+    .container-login, .container-recover{
         height: 400px;
         width: 300px;
         display: flex;
@@ -422,26 +422,27 @@ body{
         box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
     }
 
-    .card-title{
+    .card-title, .card-title-recover{
         font-size: 15px;
+        text-align: center;
     }
     
-    .textfielde > label{
+    .textfielde > label, .textfielde-recover > label{
         font-size: 10px;
     }
     
-    .textfielde label::after {
+    .textfielde label::after, .textfielde-recover label::after{
         content: '';
         display: block;
         width: 30px;
         height: 4px;
     }
     
-    .textfielde > input{
+    .textfielde > input, .textfielde-recover > input{
         padding: 6px;
     }
 
-    .textfielde i{
+    .textfielde i, .textfielde-recover i{
         top: 34px;
     }
 
