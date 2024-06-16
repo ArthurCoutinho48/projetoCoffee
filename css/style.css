@@ -8,11 +8,11 @@
 
 @import url(tela-principal/home.css);
 
-@import url(/css/tela-principal/produtos.css);
+@import url(tela-principal/produtos.css);
 
 @import url(tela-principal/promocao.css);
 
-@import url(/css/tela-principal/avaliacao.css);
+@import url(tela-principal/avaliacao.css);
 
 @import url(tela-principal/novidades.css);
 
