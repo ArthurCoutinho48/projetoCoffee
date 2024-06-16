@@ -1,3 +1,5 @@
+
+
 function index(){
     
     //Pegando os dados cadastros no localStorage e guardando em uma array
@@ -22,15 +24,21 @@ function index(){
     var sairLogin = document.getElementById('btn-Sair')
     var sairLoginMobile = document.getElementById('btn-Sair-Mobile')
 
-    let linkLoginAtivo = document.getElementById('loginAtivo')
-    let linkLoginInativo = document.getElementById('loginInativo')
+    var linkLoginAtivo = document.getElementById('loginAtivo')
+    var linkLoginAtivoMobile = document.getElementById('loginActive')
+    var linkLoginInativo = document.getElementById('loginInativo')
+    var linkLoginInativoMobile = document.getElementById('loginInativoMobile')
+
+
 
     if (usuarioCadastro.value === usuarioLogin.value){
         login.innerHTML = `Olá, ${usuarioLogin}!`
         loginMobile.innerHTML = `Olá, ${usuarioLogin}!`
 
         linkLoginAtivo.setAttribute('class', 'login-button inative')
+        linkLoginAtivoMobile.setAttribute('class', 'login-button inative')
         linkLoginInativo.setAttribute('class', 'login-button')
+        linkLoginInativoMobile.setAttribute('class', 'login-button')
         cadastro.setAttribute('class', 'login-button inative')
         cadastroMobile.setAttribute('class', 'login-button inative')
         sairLogin.setAttribute('class', 'cadastro-button')
@@ -47,13 +55,18 @@ function sairLogin(){
     var sairLogin = document.getElementById('btn-Sair')
     var sairLoginMobile = document.getElementById('btn-Sair-Mobile')
 
-    let linkLoginAtivo = document.getElementById('loginAtivo')
-    let linkLoginInativo = document.getElementById('loginInativo')
+    var linkLoginAtivo = document.getElementById('loginAtivo')
+    var linkLoginAtivoMobile = document.getElementById('loginActive')
+    var linkLoginInativo = document.getElementById('loginInativo')
+    var linkLoginInativoMobile = document.getElementById('loginInativoMobile')
 
     login.innerHTML = `Login`
     loginMobile.innerHTML = `Login`
+    
     linkLoginAtivo.setAttribute('class', 'login-button')
+    linkLoginAtivoMobile.setAttribute('class', 'login-button')
     linkLoginInativo.setAttribute('class', 'login-button inative')
+    linkLoginInativoMobile.setAttribute('class', 'login-button inative')
     sairLogin.setAttribute('class', 'cadastro-button inative')
     sairLoginMobile.setAttribute('class', 'cadastro-button inative')
     cadastro.setAttribute('class', 'login-button')

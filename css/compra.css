@@ -224,35 +224,3 @@
 .feedback-content-compra p span{
     color: var(--cor-primaria-3);
 }
-
-/*--------------------- Responsividade ---------------------*/
-
-@media screen and (max-width: 750px){
-    .container-compra{
-        margin-bottom: 30%;
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .left-side{
-        max-width: 400px;
-    }
-
-    .select-image,.thumbnails{
-        max-width: 400px;
-    }
-}
-
-@media screen and (max-width: 480px){
-    .container-compra{
-        margin-bottom: 30%;
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .left-side{
-        width: 100%;
-    }
-}

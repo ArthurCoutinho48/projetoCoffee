@@ -340,7 +340,7 @@ function checkForm(){
         const usermaneValue = usermane.value
         const passwordValue = password.value
         
-        const formData = {
+        var formData = {
             nome: fullnameValue,
             email: emailValue,
             celular: telCelularValue,

@@ -52,7 +52,7 @@ function checkCadUsermane(){
     const usermaneValue = usermane.value
 
     if (usermaneValue){
-        errorInput(usermane, "Usuário invalido ou não cadastrado!")
+        errorInput(usermane, "Usuário ou senha invalida ou não cadastrado!")
     }
 }
 
@@ -60,7 +60,7 @@ function checkCadPassword(){
     const passwordValue = password.value
 
     if (passwordValue){
-        errorInput(password, 'Senha invalida ou não cadastrada!')
+        errorInput(password, 'Usuário ou senha invalida ou não cadastrado!')
     }
 }
 

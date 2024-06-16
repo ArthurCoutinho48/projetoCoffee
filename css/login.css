@@ -202,18 +202,3 @@ div > label > a{
     visibility: visible;
     color: #e74c3c;
 }
-
-/*--------------------- Responsividade ---------------------*/
-
-@media screen and (max-width: 480px){
-    .container-login{
-       width: 350px;
-    }
-
-    .manter-conexao{
-        margin-right: 44%;
-    }
-}
-
-
-  

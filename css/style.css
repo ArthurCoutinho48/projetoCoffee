@@ -20,6 +20,8 @@
 
 @import url(login.css);
 
+@import url(recover.css);
+
 @import url(cadastro.css);
 
 @import url(compra.css);
@@ -283,10 +285,70 @@ body{
 }
 
 @media screen and (max-width: 850px){
+    .left-login{
+        display: none;
+    }
+
+    .right-login{
+        width: 100vw;
+    }
+
     .novidade-textfielde-group{
         height: 100%;
         flex-direction: column;
     }
+
+    .header-cont{
+        text-align: center;
+    }
+
+    .form-contact{
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .container-compra{
+        margin-bottom: 30%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .left-side{
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .right-side{
+        width: 100%;
+    }
+
+    .container-compra{
+        width: 100%;
+        margin-bottom: 10%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .description-botton{
+        width: 100%;
+    }
+
+    .description-compra-itens{
+        width: 100%;
+    }
+
+    .description-botton-info{
+        width: 100%;
+    }
+
+    .feedback-compra{
+        width: 100%;
+    }
+
 }
 
 @media screen and (max-width: 600px){
@@ -345,3 +407,74 @@ body{
         gap: 20px;
     }
 }
+
+@media screen and (max-width: 600px){
+    .container-login{
+        height: 400px;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 35px;
+        background-color: var(--cor-neutra-2);
+        border-radius: 20px;
+        box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-title{
+        font-size: 15px;
+    }
+    
+    .textfielde > label{
+        font-size: 10px;
+    }
+    
+    .textfielde label::after {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 4px;
+    }
+    
+    .textfielde > input{
+        padding: 6px;
+    }
+
+    .textfielde i{
+        top: 34px;
+    }
+
+    .btn-login{
+        padding: 10px 0;
+        margin: 10px 0;
+    }
+
+    .manter-conexao{
+        margin-right: 35%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .title{
+        font-size: 2rem;
+    }
+
+
+    .main-sobre-nos > section > article > h1{
+        font-size: 2rem;
+    }
+
+    .main-sobre-nos > section > article > p{
+        font-size: 15px;
+    }
+
+    .header-cont h1{
+        font-size: 2rem;
+    }
+    .contact-textfield{
+        width: 300px;
+    }
+    
+}
+
