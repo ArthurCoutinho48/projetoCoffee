@@ -106,6 +106,19 @@ body{
 
 /*--------------------- Responsividade ---------------------*/
 
+@media screen and (max-height: 1050px){
+    .main-cadastro{
+        min-height: calc(110vh - 96px);
+    }
+}
+
+@media screen and (max-height: 860px){
+    .main-cadastro{
+        min-height: calc(150vh - 96px);
+    }
+}
+
+
 @media screen and (min-width: 1800px){
     .home-left{
         max-height: 700px;
@@ -287,7 +300,7 @@ body{
     #novidades{
         flex-direction: column;
     }
-
+    
 }
 
 @media screen and (max-width: 850px){
@@ -311,6 +324,66 @@ body{
     .form-contact{
         align-items: center;
         justify-content: center;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .container-cadastro{
+        width: 95%;
+        height: auto;
+    }
+
+    .form-cadastro{
+        width: 100%;
+    }
+
+    .form-cadastro > .card-title > h1{
+        text-align: center;
+    }
+
+    .form-cadastro > .input-group > .card-subtitle{
+        margin: 1% 0 1% 0;
+    }
+
+    .input-group{
+        width: 100%;
+        max-height: 400px;
+        margin-bottom: 10%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        overflow-y: scroll;
+    }
+
+    .gender-group{
+        width: 50%;
+    }
+
+    .gender-group label::after, .input-box label::after {
+        display: none;
+    }
+
+    .info-01, .info-01_01, .info-01_02, .info-02, .info-03, .info-04{
+        width: 99%;
+        margin: 0;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .textfielde-cadastro{
+        width: 100%;
+    }
+
+    .input-box{
+        width: 100%;
+        margin: 0;
+    }
+
+    #input-box-01_01{
+        width: 100%;
+    }
+    
+    #input-box-03{
+        width: 100%;
     }
 }
 

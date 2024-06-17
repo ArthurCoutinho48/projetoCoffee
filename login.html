@@ -10,12 +10,16 @@
 </head>
 <body onload="index()">
     
+    <!--Inicio da navbar-->
     <header>
 
+        <!--Inicio da navbar-->
         <nav id="navbar">
 
+            <!--Logo da navbar-->
             <a href="index.html"><i class="fa-solid fa-mug-saucer" id="nav_logo"> coffee</i></a>
 
+            <!--Centro da navbar-->
             <ul class="nav-list">
                 <li class="nav-item">
                     <a href="index.html#home">Início</a>
@@ -40,17 +44,12 @@
                 </ul>
             </ul>
 
+            <!--Lado direito da navbar-->
             <div class="rigth-nav">
 
                 <button type="button" class="btn-default">
                     <a href="#">
                         <i class="fa-solid fa-cart-shopping"></i>
-                    </a>
-                </button>
-
-                <button type="button" class="btn-default">
-                    <a href="#">
-                        <i class="fa-solid fa-circle-half-stroke"></i>
                     </a>
                 </button>
 
@@ -81,6 +80,7 @@
 
             </div>
             
+            <!--Botões do mobile-->
             <div class="mobile-menu-icon" id="abrirMenu">
                 <button type="button" onclick="abrirMenu()">
                     <i class="fa-solid fa-bars" id="icon-mobile-abrirMenu"></i>
@@ -95,8 +95,10 @@
 
         </nav>
 
+        <!--Navbar Mobile-->
         <div class="mobile-menu inative" id="menu">
 
+            <!--Centro da navbar-->
             <ul>
                 <li class="nav-item">
                     <a href="index.html#home">Início</a>
@@ -134,6 +136,7 @@
 
             </ul>
 
+            <!--Lado direito da navbar-->
             <div class="rigth-nav-mobille">
 
                 <div class="compra-acessibilidade">
@@ -177,29 +180,34 @@
 
             </div>
 
-
         </div>
     </header>
+    <!--Fim da navbar-->
 
+    <!--Inicio do corpo do site-->
     <main class="main-login">    
 
+        <!--Lado esquerdo-->
         <div class="left-login">
 
             <img src="img/tela-login/tablet-login-animate.svg" class="left-login-image" alt="Login Animação">
 
         </div>
         
+        <!--Lado direito-->
         <div class="right-login">
             <div class="container-login"> <!--Caixa Login-->
+
                 <div class="card-title">
                     <h1>Login</h1>
                 </div>
-                <form method="post" id="form-login">
+
+                <form method="post" id="form-login"> <!--Login-->
                     <div class="textfielde"> <!--Campo de Texto-->
                         <label for="username">Usuário</label>
                         <input
                         type="text"
-                        maxlength="8"
+                        maxlength="6"
                         name="username"
                         id="username"
                         placeholder="Usuário">
@@ -225,16 +233,19 @@
                         <label for="manter-conexao">Mantenha-me conectado</label>
                     </div>
             
-                    <button class="btn-login" type="submit" nane="entrar" id="entrar"><a href="#">Entrar</a></button>
+                    <button class="btn-login" type="submit" nane="entrar" id="entrar"><a>Entrar</a></button>
                 </form>
-                <div class="cadastro-senha">
+
+                <div class="cadastro-senha"> <!--Informações de cadastro-->
                     <label for="cadastro">Não tem uma conta? <a href="cadastro.html">Cadastre-se</a> | <a href="recover.html">Esqueceu sua senha?</a></label>
                 </div>
             </div>
         </div>
 
     </main>
+    <!--Fim do corpo do site-->
 
+    <!--Inicio do meu footer-->
     <footer>
         <img src="img/footer.svg" alt="fundo">
         
@@ -255,6 +266,7 @@
             </div>
         </div>
     </footer>
+    <!--Fim do meu footer-->
 
     <script src="js/validacaoLogin.js"></script>
     <script src="js/fixedLogin.js"></script>

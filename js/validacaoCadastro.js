@@ -30,7 +30,7 @@ fullname.addEventListener('blur', () => {
 
 cpf.addEventListener('blur', () => {
     checkInputCPF()
-    RegExCPF(cpf)
+    mascaraCPF(cpf)
 })
 
 dataNascimento.addEventListener('blur', () => {
@@ -108,12 +108,24 @@ function checkInputFullname(){
 
 function checkInputCPF(){
     const cpfValue = cpf.value
+    var cpfRegEx = cpf.value.replace(/[^\d]+/g,'')
 
     if (cpfValue === ''){
         errorInput(cpf, "Preencha seu CPF!")
-    }else if (cpfValue.length != 14){
+    }else if (cpfRegEx.length != 11){
         errorInput(cpf, "Preencha seu CPF!")
-    }else{
+    }else if (cpfRegEx == "00000000000" || 
+		cpfRegEx == "11111111111" || 
+		cpfRegEx == "22222222222" || 
+		cpfRegEx == "33333333333" || 
+		cpfRegEx == "44444444444" || 
+		cpfRegEx == "55555555555" || 
+		cpfRegEx == "66666666666" || 
+		cpfRegEx == "77777777777" || 
+		cpfRegEx == "88888888888" || 
+		cpfRegEx == "99999999999"){
+            errorInput(cpf, "CPF invalido!")
+        }else{
         const formItem = cpf.parentElement
         formItem.className = 'textfielde-cadastro success'
     }
@@ -374,17 +386,24 @@ function errorInput2(select, message){
 
 //Máscaras
 
-function RegExCPF(cpf){
-    const elemtentoAlvo = cpf
-    const cpfValue = cpf.value   
+function mascaraCPF(cpf){
+    let cpfValue = cpf.value
 
-    let cpfAtualizado;
+    //Removendo os caracteres não numéricos e limitando a 11 dígitos.
+    cpfValue = cpfValue.replace(/\D/g, '').substring(0,11)
 
-    cpfAtualizado = cpfValue.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, function(regex, argumento1, argumento2, argumento3, argumento4) {
-        return argumento1 + '.' + argumento2 + '.' + argumento3 + '-' + argumento4;
-    })  
+    let parte01 = cpfValue.slice(0,3)
+    let parte02 = cpfValue.slice(3,6)
+    let parte03 = cpfValue.slice(6,9)
+    let parte04 = cpfValue.slice(9,11)
+    let cpfFormatado = ''
 
-    elemtentoAlvo.value = cpfAtualizado; 
+    if (cpfValue.length == 11){
+        cpfFormatado = `${parte01}.${parte02}.${parte03}-${parte04}`
+    }
+    
+    //Enviar para o campo o número formatado
+    cpf.value = cpfFormatado
 }
 
 function mascaraTelefone(telFixo){
@@ -393,14 +412,14 @@ function mascaraTelefone(telFixo){
     //Removendo os caracteres não numéricos e limitando a 11 dígitos.
     telFixoValue = telFixoValue.replace(/\D/g, '').substring(0,12)
     
-    let pais = telFixoValue.slice(0,2)
+    /*let pais = telFixoValue.slice(0,2)*/
     let ddd = telFixoValue.slice(2,4)
     let parte1 = telFixoValue.slice(4,8)
     let parte2 = telFixoValue.slice(8,12)
     let numeroFormatado = ''
 
     if (telFixoValue.length == 12){
-        numeroFormatado = `(+${pais}) ${ddd} ${parte1}-${parte2}`
+        numeroFormatado = `(+55) ${ddd} ${parte1}-${parte2}`
     }
     
     //Enviar para o campo o número formatado
@@ -414,21 +433,53 @@ function mascaraCelular(telCelular){
     //Removendo os caracteres não numéricos e limitando a 11 dígitos.
     telCelularValue = telCelularValue.replace(/\D/g, '').substring(0,13)
     
-    let pais = telCelularValue.slice(0,2)
+    /*let pais = telCelularValue.slice(0,2)*/
     let ddd = telCelularValue.slice(2,4)
     let parte1 = telCelularValue.slice(4,9)
     let parte2 = telCelularValue.slice(9,13)
     let numeroFormatado = ''
 
     if (telCelularValue.length == 13){
-        numeroFormatado = `(+${pais}) ${ddd} ${parte1}-${parte2}`
+        numeroFormatado = `(+55) ${ddd} ${parte1}-${parte2}`
     }
     
     //Enviar para o campo o número formatado
     telCelular.value = numeroFormatado
 }
 
+fullname.addEventListener('keypress', function(e){
+    const keyCode = (e.keyCode ? e.keyCode : e.wich)
+
+    if(keyCode > 47 && keyCode < 58){
+        e.preventDefault()
+    }
+})
+
+nomeMae.addEventListener('keypress', function(e){
+    const keyCode = (e.keyCode ? e.keyCode : e.wich)
+
+    if(keyCode > 47 && keyCode < 58){
+        e.preventDefault()
+    }
+})
+
 usermane.addEventListener('keypress', function(e){
+    const keyCode = (e.keyCode ? e.keyCode : e.wich)
+
+    if(keyCode > 47 && keyCode < 58){
+        e.preventDefault()
+    }
+})
+
+password.addEventListener('keypress', function(e){
+    const keyCode = (e.keyCode ? e.keyCode : e.wich)
+
+    if(keyCode > 47 && keyCode < 58){
+        e.preventDefault()
+    }
+})
+
+passwordConfirmation.addEventListener('keypress', function(e){
     const keyCode = (e.keyCode ? e.keyCode : e.wich)
 
     if(keyCode > 47 && keyCode < 58){

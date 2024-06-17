@@ -10,12 +10,16 @@
 </head>
 <body onload="index()">
 
+    <!--Inicio da navbar-->
     <header>
 
+        <!--Navbar Descktop-->
         <nav id="navbar">
 
+            <!--Logo da navbar-->
             <a href="index.html"><i class="fa-solid fa-mug-saucer" id="nav_logo"> coffee</i></a>
 
+            <!--Centro da navbar-->
             <ul class="nav-list">
                 <li class="nav-item">
                     <a href="#home">Início</a>
@@ -40,17 +44,12 @@
                 </ul>
             </ul>
 
+            <!--Lado direito da navbar-->
             <div class="rigth-nav">
 
                 <button type="button" class="btn-default">
                     <a href="#">
                         <i class="fa-solid fa-cart-shopping"></i>
-                    </a>
-                </button>
-
-                <button type="button" class="btn-default">
-                    <a href="#">
-                        <i class="fa-solid fa-circle-half-stroke"></i>
                     </a>
                 </button>
 
@@ -81,6 +80,7 @@
 
             </div>
             
+            <!--Botões do mobile-->
             <div class="mobile-menu-icon" id="abrirMenu">
                 <button type="button" onclick="abrirMenu()">
                     <i class="fa-solid fa-bars" id="icon-mobile-abrirMenu"></i>
@@ -95,6 +95,7 @@
 
         </nav>
 
+        <!--Navbar Mobile-->
         <div class="mobile-menu inative" id="menu">
 
             <ul>
@@ -142,11 +143,6 @@
                             <i class="fa-solid fa-cart-shopping"></i>
                         </a>
                     </button>
-                    <button type="button" class="btn-default">
-                        <a href="#">
-                            <i class="fa-solid fa-circle-half-stroke"></i>
-                        </a>
-                    </button>
                 </div>
 
                 <div class="login-cadastro">
@@ -179,12 +175,17 @@
 
 
         </div>
-    </header>
 
+    </header>
+    <!--Fim da navbar-->
+
+    <!--Inicio do corpo do site-->
     <main class="main-index">
 
+        <!--Parte 01 - Inicio-->
         <section id="home" class="section">
             
+            <!--Lado direito da tela de inicio-->
             <div class="home-rigth">
                 <h1 class="title">
                     Café fresco pela <span>manhã</span>
@@ -210,6 +211,7 @@
 
             </div>
 
+            <!--Lado esquerdo da tela de inicio-->
             <div class="home-left">
                 <picture>
                     <source media="(max-width: 1700px)" srcset="img/tela-principal/fundo1-600-500.png">
@@ -219,10 +221,13 @@
 
         </section>
 
+        <!--Parte 02 - Produtos-->
         <section id="produtos" class="section">
+            <!--Titulo e subtitulo da tela de produtos-->
             <h2 class="section-title">Produtos</h2>
-            <h3 class="section-subtitle">Cafés para as quatro estações</h3>
+            <h3 class="section-subtitle">Cafés para o seu dia-dia</h3>
 
+            <!--Cards dos produtos-->
             <div class="cups">
                     <!--Produto 01-->
                     <div class="cup">
@@ -336,12 +341,13 @@
                             </a>
                         </div>
                     </div>
-                
             </div>
 
         </section>
 
+        <!--Parte 03 - Promoção-->
         <section id="promocao" class="section">
+            <!--Cards das promoções-->
             <div class="cards-prom">
                 <div class="express">
                     <div class="svg">
@@ -369,10 +375,13 @@
             </div>
         </section>
 
+        <!--Parte 04 - Avaliação-->
         <section id="avaliacao" class="section">
 
+            <!--SVG de interação-->
             <img src="img/tela-principal/conversation-animate.svg" alt="Animação" class="avaliacao-animacao">
 
+            <!--Avaliações-->
             <div class="avaliacao_content">
                 <h2 class="section-title">Avaliações</h2>
                 <h3 class="section-subtitle">O que os clientes falam sobre nós</h3>
@@ -425,10 +434,13 @@
 
         </section>
 
+        <!--Parte 05 - Cadastro de novidades-->
         <section id="novidades" class="section">
+            <!--Titulo e subtitulo da tela de novidades-->
             <h2 class="section-title">Receba novidades</h2>
             <h3 class="section-subtitle">Preencha seus dados e receba novidades em seu e-mail.</h3>
 
+            <!--Formulario de cadastro-->
             <form class="novidade-textfielde-group" id="form-novidades">
                 <div class="novidade-textfielde">
                     <input type="text" placeholder="Nome" id="username">
@@ -444,7 +456,9 @@
 
         </section>
     </main>
+    <!--Fim do corpo do site-->
 
+    <!--Inicio do meu footer-->
     <footer>
         <img src="img/footer.svg" alt="fundo">
         
@@ -465,6 +479,7 @@
             </div>
         </div>
     </footer>
+    <!--Fim do meu footer-->
 
     <script src="js/novidades.js"></script>
     <script src="js/fixedLogin.js"></script>

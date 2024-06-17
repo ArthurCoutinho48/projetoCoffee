@@ -131,3 +131,19 @@ function errorInput(input, message){
     textMessage.innerText = message
     formItem.className = 'textfielde-recover erro'
 }
+
+passwordNova.addEventListener('keypress', function(e){
+    const keyCode = (e.keyCode ? e.keyCode : e.wich)
+
+    if(keyCode > 47 && keyCode < 58){
+        e.preventDefault()
+    }
+})
+
+passwordconfirmationNova.addEventListener('keypress', function(e){
+    const keyCode = (e.keyCode ? e.keyCode : e.wich)
+
+    if(keyCode > 47 && keyCode < 58){
+        e.preventDefault()
+    }
+})

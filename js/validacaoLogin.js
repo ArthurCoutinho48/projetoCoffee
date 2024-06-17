@@ -26,7 +26,7 @@ function checkInputUsermane(){
     if (usermaneValue === ''){
         errorInput(usermane, "Preencha um usuario!")
     }else if (usermaneValue.length != 6){
-        errorInput(usermane, "Campo usuarío deve ter 8 caracteres!")
+        errorInput(usermane, "Campo usuarío deve ter 6 caracteres!")
     }else{
         const formItem = usermane.parentElement
         formItem.className = 'textfielde success'
@@ -113,3 +113,21 @@ function errorInput(input, message){
     textMessage.innerText = message
     formItem.className = 'textfielde erro'
 }
+
+//Máscara login
+
+usermane.addEventListener('keypress', function(e){
+    const keyCode = (e.keyCode ? e.keyCode : e.wich)
+
+    if(keyCode > 47 && keyCode < 58){
+        e.preventDefault()
+    }
+})
+
+password.addEventListener('keypress', function(e){
+    const keyCode = (e.keyCode ? e.keyCode : e.wich)
+
+    if(keyCode > 47 && keyCode < 58){
+        e.preventDefault()
+    }
+})
